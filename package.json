@@ -1,6 +1,6 @@
 {
   "name": "vue-node-renderer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Load Vue files directly into a Node / JSDOM context",
   "main": "index.js",
   "scripts": {
