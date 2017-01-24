@@ -1,4 +1,4 @@
-# Vue Node Renderer
+# Vue Node Renderer [![Build Status](https://travis-ci.org/jhaynie/vue-node-renderer.svg?branch=master)](https://travis-ci.org/jhaynie/vue-node-renderer)
 
 This module makes it rather easy to load [Vue.JS](https://vuejs.org) Component files into your Node environment without much fuss.
 
@@ -21,7 +21,7 @@ You'll need to have the following in your app package.json for this module to wo
 
 Let's say you have this vue component:
 
-```
+```html
 <template>
 	<div>Hello {{msg}}</div>
 </template>
@@ -56,7 +56,7 @@ If your Vue component renders to the <canvas> element, make sure you install the
 
 For example:
 
-```
+```html
 <template>
 	<canvas width="150" height="200"></canvas>
 </template>
