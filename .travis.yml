@@ -2,7 +2,20 @@ language: node_js
 node_js:
 - '6'
 - '7'
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libcairo2-dev
+      - libjpeg8-dev
+      - libpango1.0-dev
+      - libgif-dev
+      - g++-4.9
+env:
+  - CXX=g++-4.9
 install:
-   - sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
-   - npm install yarn -g
+   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+   - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+   - sudo apt-get update && sudo apt-get install yarn
    - yarn
