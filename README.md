@@ -64,7 +64,7 @@ For example:
 <script>
 export default {
 	mounted() {
-		// use jquery to get our canvas element
+		// reference our DOM element
 		const canvas = this.$el;
 		// draw a couple of boxes into the canvas
 		const ctx = canvas.getContext('2d');
