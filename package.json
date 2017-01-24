@@ -1,0 +1,41 @@
+{
+  "name": "vue-node-renderer",
+  "version": "1.0.0",
+  "description": "Load Vue files directly into a Node / JSDOM context",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "Jeff Haynie",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue.js"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^2.1.0",
+    "vue-template-compiler": "^2.1.0",
+    "webpack": "^2.1.0"
+  },
+  "dependencies": {
+    "css-loader": "^0.26.0",
+    "expose-loader": "^0.7.1",
+    "file-loader": "^0.9.0",
+    "inject-loader": "^2.0.0",
+    "jsdom": "^9.9.1",
+    "jsdom-global": "^2.1.1",
+    "memory-fs": "^0.4.1",
+    "postcss": "^5.0.21",
+    "url-loader": "^0.5.7",
+    "vue-loader": "^10.0.2"
+  },
+  "devDependencies": {
+    "canvas": "^1.6.2",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2",
+    "vue": "^2.1.0",
+    "vue-template-compiler": "^2.1.0",
+    "webpack": "^2.1.0"
+  }
+}
