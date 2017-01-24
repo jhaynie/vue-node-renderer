@@ -90,6 +90,48 @@ Render('./test.vue', {msg:'from props'}).then(result => {
 });
 ```
 
+### Customizing the Webpack config
+
+You can customize the Webpack loader used to render your files.
+
+Say you have a PNG and you want to require it in your Vue component:
+
+```html
+<template>
+	<img :src="img"></img>
+</template>
+
+<script>
+import circle from './circle.png';
+export default {
+	computed: {
+		img() {
+			return circle;
+		}
+	}
+};
+</script>
+```
+
+You can pass a custom loader to render as a 3rd argument:
+
+```javascript
+const config = {
+	module: {
+		loaders: [
+			{
+				test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+				loader: 'url-loader'
+			}
+		]
+	}
+};
+Render(fn, null, config).then(result => {
+	// should be <img src="data:image/png;base64,iVBORw0KGgoA .........
+	console.log(result.body);
+});
+```
+
 ## Contributions
 
 Pull requests welcome and encouraged. I've only tested this minimally and am using with my own project.
